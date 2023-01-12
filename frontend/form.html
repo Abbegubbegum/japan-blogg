@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js"></script>
+    <script src="./js/form.js" defer></script>
 
     <title>Japan Blogg Formulär</title>
   </head>
@@ -13,7 +13,12 @@
     <form id="form">
       <label for="blog-name">
         <h3>Title:</h3>
-        <input type="text" class="blog-name" />
+        <input type="text" class="blog-name" id="title" />
+      </label>
+
+      <label for="blog-author">
+        <h3>Author:</h3>
+        <input type="text" class="blog-author" id="author" />
       </label>
 
       <label for="date-input">
@@ -23,30 +28,38 @@
 
       <label for="location-input">
         <h3>Plats för händelsen:</h3>
-        <input type="text" />
+        <input type="text" id="location" />
       </label>
 
-      <div class="paragraf-container">
-        <label for="paragraf-title">
-          <h3>Paragraf title:</h3>
-          <input type="text" class="paragraf-title" />
-        </label>
-        <label for="paragraf-text">
-          <h3>Paragraf:</h3>
-          <textarea class="paragraf-text" cols="30" rows="10"></textarea>
-        </label>
-      </div>
+      <div id="blog-content-container">
+        <div class="paragraf-container">
+          <label for="paragraf-title">
+            <h3>Paragraf title:</h3>
+            <input type="text" class="paragraf-title" />
+          </label>
+          <label for="paragraf-text">
+            <h3>Paragraf:</h3>
+            <textarea class="paragraf-text" cols="30" rows="10"></textarea>
+          </label>
+          <button type="button" onclick="removeElement(event)">
+            Remove Element
+          </button>
+        </div>
 
-      <div class="img-container">
-        <label for="img-src">
-          <h3>Img Path:</h3>
-          <input type="text" class="img-src" />
-        </label>
+        <div class="img-container">
+          <label for="img-src">
+            <h3>Img Path:</h3>
+            <input type="text" class="img-src" />
+          </label>
 
-        <label for="img-text">
-          <h3>Img Text:</h3>
-          <input type="text" class="img-text" />
-        </label>
+          <label for="img-text">
+            <h3>Img Text:</h3>
+            <input type="text" class="img-text" />
+          </label>
+          <button type="button" onclick="removeElement(event)">
+            Remove Element
+          </button>
+        </div>
       </div>
 
       <label for="password-input" id="password-container"
