@@ -1,10 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Japan Blogg Formulär</title>
-	</head>
-	<body></body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+
+    <title>Japan Blogg Formulär</title>
+  </head>
+  <body>
+    <h1>Här är formuläret</h1>
+    <form id="form">
+      <label for="blog-name">
+        <h3>Title:</h3>
+        <input type="text" class="blog-name" />
+      </label>
+
+      <label for="date-input">
+        <h3>Datum för händelsen:</h3>
+        <input type="date" />
+      </label>
+
+      <label for="location-input">
+        <h3>Plats för händelsen:</h3>
+        <input type="text" />
+      </label>
+
+      <div class="paragraf-container">
+        <label for="paragraf-title">
+          <h3>Paragraf title:</h3>
+          <input type="text" class="paragraf-title" />
+        </label>
+        <label for="paragraf-text">
+          <h3>Paragraf:</h3>
+          <textarea class="paragraf-text" cols="30" rows="10"></textarea>
+        </label>
+      </div>
+
+      <div class="img-container">
+        <label for="img-src">
+          <h3>Img Path:</h3>
+          <input type="text" class="img-src" />
+        </label>
+
+        <label for="img-text">
+          <h3>Img Text:</h3>
+          <input type="text" class="img-text" />
+        </label>
+      </div>
+
+      <label for="password-input" id="password-container"
+        ><h3>Password:</h3>
+        <input type="password" id="password-input" />
+      </label>
+
+      <label for="submit">
+        <button type="submit-button" class="submit-button">Submit</button>
+      </label>
+    </form>
+
+    <button onclick="addParagraf()">Add Paragraf</button>
+    <button onclick="addIMG()">Add IMG</button>
+  </body>
+  <style>
+    * * {
+      margin: 2px;
+      padding: 1px;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
 </html>
