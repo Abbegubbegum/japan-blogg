@@ -10,4 +10,4 @@ A web application for displaying and managing blogg posts for NTI Odenplans TE4 
 
 2. Start up the server
 
-        npm run dev
+        vercel dev

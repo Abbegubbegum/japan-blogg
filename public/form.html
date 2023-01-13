@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./js/form.js" defer></script>
 
-    <title>Japan Blogg Formulär</title>
-  </head>
-  <body>
-    <h1>Här är formuläret</h1>
-    <form id="form">
-      <label for="blog-name">
-        <h3>Title:</h3>
-        <input type="text" class="blog-name" id="title" />
-      </label>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="./js/form.js" defer></script>
+  <link rel="stylesheet" href="../public/css/formStyle.css">
 
-      <label for="blog-author">
-        <h3>Author:</h3>
-        <input type="text" class="blog-author" id="author" />
-      </label>
+  <title>Japan Blogg Formulär</title>
+</head>
 
-      <label for="date-input">
-        <h3>Datum för händelsen:</h3>
-        <input type="date" />
-      </label>
+<body>
+  <h1>Här är formuläret</h1>
+  <form id="form">
+    <label for="blog-name">
+      <h3>Title:</h3>
+      <input type="text" class="blog-name" id="title" />
+    </label>
 
-      <label for="location-input">
-        <h3>Plats för händelsen:</h3>
-        <input type="text" id="location" />
-      </label>
+    <label for="blog-author">
+      <h3>Author:</h3>
+      <input type="text" class="blog-author" id="author" />
+    </label>
 
-      <div id="blog-content-container">
-        <div class="paragraf-container">
-          <label for="paragraf-title">
-            <h3>Paragraf title:</h3>
-            <input type="text" class="paragraf-title" />
-          </label>
-          <label for="paragraf-text">
-            <h3>Paragraf:</h3>
-            <textarea class="paragraf-text" cols="30" rows="10"></textarea>
-          </label>
-          <button type="button" onclick="removeElement(event)">
-            Remove Element
-          </button>
-        </div>
+    <label for="date-input">
+      <h3>Datum för händelsen:</h3>
+      <input type="date" />
+    </label>
+
+    <label for="location-input">
+      <h3>Plats för händelsen:</h3>
+      <input type="text" id="location" />
+    </label>
+
+    <div id="blog-content-container">
+      <div class="paragraf-container">
+        <label for="paragraf-title">
+          <h3>Paragraf title:</h3>
+          <input type="text" class="paragraf-title" />
+        </label>
+        <label for="paragraf-text">
+          <h3>Paragraf:</h3>
+          <textarea class="paragraf-text" cols="30" rows="10"></textarea>
+        </label>
+        <button class="RMElementButton" type="button" onclick="removeElement(event)">
+          Remove Element
+        </button>
+      </div>
 
         <div class="img-container">
           <label for="img-src">
@@ -61,19 +64,29 @@
           </button>
         </div>
 
+        <label for="img-text">
+          <h3>Img Text:</h3>
+          <input type="text" class="img-text" />
+        </label>
+        <button class="RMElementButton" type="button" onclick="removeElement(event)">
+          Remove Element
+        </button>
       </div>
 
-      <label for="password-input" id="password-container"
-        ><h3>Password:</h3>
-        <input type="password" id="password-input" />
-      </label>
+    </div>
 
-      <label for="submit">
-        <button type="submit-button" class="submit-button">Submit</button>
-      </label>
-    </form>
+    <label for="password-input" id="password-container">
+      <h3>Password:</h3>
+      <input type="password" id="password-input" />
+    </label>
 
-    <button onclick="addParagraf()">Add Paragraf</button>
-    <button onclick="addIMG()">Add IMG</button>
-  </body>
+    <label for="submit">
+      <button type="submit-button" class="submit-button">Submit</button>
+    </label>
+  </form>
+
+  <button class="addButtons" onclick="addParagraf()">Add Paragraf</button>
+  <button class="addButtons" onclick="addIMG()">Add IMG</button>
+</body>
+
 </html>

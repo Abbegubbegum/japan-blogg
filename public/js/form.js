@@ -41,6 +41,7 @@ function addParagraf() {
   let rmButton = document.createElement("button");
   rmButton.setAttribute("type", "button");
   rmButton.setAttribute("onclick", "removeElement(event)");
+  rmButton.setAttribute("class", "RMElementButton");
   rmButton.append("Remove Element");
 
   div.appendChild(rmButton);
@@ -83,6 +84,7 @@ function addIMG() {
   let rmButton = document.createElement("button");
   rmButton.setAttribute("type", "button");
   rmButton.setAttribute("onclick", "removeElement(event)");
+  rmButton.setAttribute("class", "RMElementButton");
   rmButton.append("Remove Element");
 
   div.appendChild(rmButton);
@@ -97,7 +99,7 @@ function removeElement(event) {
 async function sendForm() {
   let title = document.getElementById("title").value;
   let author = document.getElementById("author").value;
-  let date = document.querySelector("input[type='date']");
+  let date = document.querySelector("input[type='date']").value;
   let location = document.getElementById("location").value;
   let password = document.getElementById("password-input").value;
 
@@ -154,8 +156,8 @@ async function sendForm() {
       title: title,
       author: author,
       location: location,
-      date: date.valueAsString,
-      content: [],
+      date: date,
+      content: content,
       password: password,
     }),
   });

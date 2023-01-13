@@ -1,0 +1,7 @@
+.BloggSquare {
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+}

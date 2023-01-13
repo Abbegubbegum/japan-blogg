@@ -42,6 +42,6 @@ export default async function handler(req, res) {
 		}
 	} catch (err) {
 		console.log(err);
-		res.status(500).send("error occured when posting blog");
+		res.status(500).send("error occured when posting blog, make sure all forms are filled");
 	}
 }

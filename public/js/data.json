@@ -1,0 +1,68 @@
+[
+    {
+        "title": "Mitt Blogg Inlägg",
+        "author": "Marcus P",
+        "location": "Kagoshima",
+        "timestamp": 10023048,
+        "content": [
+            {
+                "type": "txt",
+                "title": "School",
+                "text": "This day was amazing... we learned a lot"
+            },
+            {
+                "type": "img",
+                "path": "bild3009.png",
+                "imgText": "Me and my buddies"
+            },
+            {
+                "type": "txt",
+                "title": "School",
+                "text": "This day was amazing... we learned a lot"
+            },
+            {
+                "type": "txt",
+                "title": "School",
+                "text": "This day was amazing... we learned a lot"
+            },
+            {
+                "type": "img",
+                "path": "bild3009.png",
+                "imgText": "Me and my buddies"
+            }
+        ]
+    },
+    {
+        "title": "Mitt Blogg Inlägg",
+        "author": "Marcus P",
+        "location": "Kagoshima",
+        "timestamp": 10023048,
+        "content": [
+            {
+                "type": "txt",
+                "title": "School",
+                "text": "This day was amazing... we learned a lot"
+            },
+            {
+                "type": "img",
+                "path": "bild3009.png",
+                "imgText": "Me and my buddies"
+            },
+            {
+                "type": "txt",
+                "title": "School",
+                "text": "This day was amazing... we learned a lot"
+            },
+            {
+                "type": "txt",
+                "title": "School",
+                "text": "This day was amazing... we learned a lot"
+            },
+            {
+                "type": "img",
+                "path": "bild3009.png",
+                "imgText": "Me and my buddies"
+            }
+        ]
+    }
+]

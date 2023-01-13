@@ -1,0 +1,91 @@
+input[type='text'] {
+    border-radius: 5px;
+    padding: 2.5px;
+    margin: 10px;
+}
+
+input[type='date'] {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+
+}
+
+.paragraf-text {
+    border: 2.2px solid black;
+    border-radius: 5px;
+    padding: 2.5px;
+    margin: 10px;
+}
+
+input[type='password'] {
+    border-radius: 5px;
+    padding: 2.5px;
+    margin: 10px;
+    max-width: 60%;
+
+}
+
+.RMElementButton {
+
+    border-radius: 5px;
+    padding: 2.5px;
+    margin: 10px;
+    max-width: 10%;
+    padding: 5px;
+
+}
+
+.paragraf-container {
+    background-color: rgb(230, 227, 227);
+    padding-top: 2px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    padding-bottom: 7.5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-container {
+    background-color: rgb(230, 227, 227);
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    text-align: center;
+}
+
+.submit-container {
+
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.submit-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 5px;
+}
+
+.paragraf-button {
+    padding: 10px;
+    margin: 5px;
+}
+
+#password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addButtons {
+    margin: 5px;
+    padding: 5px;
+}
