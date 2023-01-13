@@ -40,11 +40,7 @@ function createTitle(post) {
 	let title = document.createElement("h2");
 	title.append(post.title);
 
-	let date = document.createElement("p");
-	date.append(post.date);
-
 	div.appendChild(title);
-	div.appendChild(date);
 
 	div.appendChild(createSubheading(post.date, post.author, post.location));
 
