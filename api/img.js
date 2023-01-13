@@ -7,14 +7,14 @@ export default async function handler(req, res) {
 			const db = await connectToDatabase();
 			const blogsDB = db.collection("blogs");
 			const blogs = await blogsDB.find({}).toArray();
-			let imgArray = [];
+			let blogImgs = [];
 			blogs.forEach((blog) => {
 				blog.content.forEach((element) => {
 					if (
 						element.type === "img" &&
-						!imgArray.find((img) => img.path === element.path)
+						!blogImgs.find((img) => img.path === element.path)
 					) {
-						imgArray.push(element);
+						blogImgs.push(element);
 					}
 				});
 			});

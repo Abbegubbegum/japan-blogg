@@ -1,44 +1,112 @@
-h1 {
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
 }
 
-#topnav {
-    width: 100%;
- 
-    position: fixed;
-    top: 0;
-    left: 0;
- 
-    background-color: Black;
- 
-    font-family: Arial, sans-serif;
-    font-size: 15px;
- }
- 
- .nav-link {
-    display: inline-block;
-    width: 100px;
-    height: 55px;
- 
-    color: White;
- 
-    text-align: center;
-    line-height: 55px;
- 
+body {
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+
+
+
+.title {
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.navContainer {
+    display: flex;
+    align-self: center;
+    background-color: #BC002D;
+    margin: 1rem;
+    justify-content: space-around;
+    width: 95%;
+    border-radius: 5px;
+}
+
+a {
+    color: white;
+    margin: 0.5rem;
     text-decoration: none;
- }
- 
- #logo {
-    width: 120px;
- 
-    background-color: RoyalBlue;
- 
+}
+
+a:hover {
+    color: rgb(206, 206, 206);
+}
+
+#blogContainer {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+    align-self: center;
+}
+
+.blogItem {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.blogItem>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+.blogItem h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+.blog-title {
+    margin: 2rem auto !important;
+    width: fit-content;
+}
+
+.blog-subheading {
+    margin-top: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.blog-author {
+    font-size: 1.3rem;
     font-weight: bold;
- }
- 
- #about {
-    position: absolute;
-    top: 0;
-    right: 0;
- }
+}
+
+.blog-location {
+    font-size: 1.3rem;
+    letter-spacing: 0rem;
+    margin-left: 0.3rem;
+}
+
+.location-div {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.blog-img {
+    max-width: 40rem;
+    max-height: 30rem;
+}
+
+#aboutContainer {
+    display: flex;
+    font-size: xx-large;
+    width: 95%;
+    align-self: center;
+}

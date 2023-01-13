@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/form.js" defer></script>
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,7 +27,7 @@
       <h3>Author:</h3>
       <input type="text" class="blog-author" id="author" required/>
     </label>
-
+    
     <label for="date-input">
       <h3>Date:</h3>
       <input type="date" required/>
@@ -49,20 +53,21 @@
         </button>
       </div>
 
-        <div class="img-container">
-          <label for="img-src">
-            <h3>Img Path:</h3>
-            <input type="text" class="img-src" required/>
-          </label>
 
-          <label for="img-text">
-            <h3>Img Text:</h3>
-            <input type="text" class="img-text" required/>
-          </label>
-          <button type="button" onclick="removeElement(event)">
-            Remove Element
-          </button>
-        </div>
+      <div class="img-container">
+        <label for="img-src">
+          <h3>Img Path:</h3>
+
+          <input type="text" class="img-src" required/>
+        </label>
+
+        <label for="img-text">
+          <h3>Img Text:</h3>
+          <input type="text" class="img-text" required/>
+        </label>
+        <button class="RMElementButton" type="button" onclick="removeElement(event)">
+          Remove Element
+        </button>
       </div>
 
     </div>
