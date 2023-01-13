@@ -31,6 +31,7 @@ function createImage(image) {
   div.setAttribute("class", "img-container");
 
   let img = document.createElement("img");
+  img.setAttribute("class", "indImg");
   img.src = image;
 
   div.appendChild(img);
