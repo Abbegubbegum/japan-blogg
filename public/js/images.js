@@ -1,13 +1,29 @@
-// fetch("/api/images")
-fetch("./js/mock.json")
-  .then((res) => res.json())
+fetch("/api/img")
+  .then((res) => {
+    if (res.status !== 200) {
+      throw new Error("bad");
+    }
+    return res.json();
+  })
   .then((data) => {
     console.dir(data);
+    console.log(data.length);
     for (let i = data.length - 1; i >= 0; i--) {
-      document
-        .getElementById("imgs-container")
-        .appendChild(createImage(data[i].path));
+      if (typeof data[i] === "string") {
+        document
+          .getElementById("imgs-container")
+          .appendChild(createImage("./imgs/" + data[i]));
+      } else {
+        document
+          .getElementById("imgs-container")
+          .appendChild(createImage("./imgs/" + data[i].path));
+      }
     }
+  })
+  .catch((err) => {
+    console.log(err);
+    alert("Images failed to load. Please try again later!");
+    window.location.pathname = "/";
   });
 
 function createImage(image) {
