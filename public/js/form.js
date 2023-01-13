@@ -41,10 +41,7 @@ function addParagraf() {
   let rmButton = document.createElement("button");
   rmButton.setAttribute("type", "button");
   rmButton.setAttribute("onclick", "removeElement(event)");
-<<<<<<< HEAD
   rmButton.setAttribute("class", "RMElementButton");
-=======
->>>>>>> c74165f (Rename)
   rmButton.append("Remove Element");
 
   div.appendChild(rmButton);
@@ -87,10 +84,7 @@ function addIMG() {
   let rmButton = document.createElement("button");
   rmButton.setAttribute("type", "button");
   rmButton.setAttribute("onclick", "removeElement(event)");
-<<<<<<< HEAD
   rmButton.setAttribute("class", "RMElementButton");
-=======
->>>>>>> c74165f (Rename)
   rmButton.append("Remove Element");
 
   div.appendChild(rmButton);
@@ -105,11 +99,7 @@ function removeElement(event) {
 async function sendForm() {
   let title = document.getElementById("title").value;
   let author = document.getElementById("author").value;
-<<<<<<< HEAD
   let date = document.querySelector("input[type='date']").value;
-=======
-  let date = document.querySelector("input[type='date']");
->>>>>>> c74165f (Rename)
   let location = document.getElementById("location").value;
   let password = document.getElementById("password-input").value;
 
