@@ -13,7 +13,7 @@ function addParagraf() {
   nodeTitle.setAttribute("for", "paragraf-title");
 
   let titleText = document.createElement("h3");
-  titleText.append("Paragraf title:");
+  titleText.append("Paragraph Title:");
 
   let titleInput = document.createElement("input");
   titleInput.setAttribute("type", "text");
@@ -27,7 +27,7 @@ function addParagraf() {
   nodeParagraf.setAttribute("for", "paragraf-text");
 
   let text = document.createElement("h3");
-  text.append("Paragraf:");
+  text.append("Paragraph:");
   let input = document.createElement("textarea");
   input.setAttribute("for", "paragraf-text");
   input.setAttribute("cols", "30");
@@ -162,6 +162,12 @@ async function sendForm() {
     }),
   });
 
-  if (!res.ok) {
+  console.log(res);
+
+  if (res.ok && res.status === 200) {
+    alert(await res.text());
+    window.location.pathname = "/";
+  } else {
+    alert(await res.text());
   }
 }
