@@ -20,10 +20,17 @@ export default async function handler(req, res) {
 			});
 
 			const miscImgs = getImages();
+			miscImgs.forEach((element) => {
+				// this will not find duplicates from miscImgs
+				if (!imgArray.find((img) => img.path === element))
+				{
+					imgArray.push(element);
+				}
+			})
 			
-            const allImg = Array.prototype.concat(blogImgs, miscImgs);
             
-            res.status(200).send(allImg);
+            
+            res.status(200).send(imgArray);
 		} else {
 			res.status(501).send("only GET method is allowed");
 		}

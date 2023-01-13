@@ -8,7 +8,7 @@
             {
                 "type": "txt",
                 "title": "School",
-                "text": "This day was amazing... we learned a lot"
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere sit amet sapien at gravida. Pellentesque eu interdum lacus. Sed id est id ligula consectetur tempus. Aenean vitae enim nec nunc ornare euismod in eget est. Duis pretium condimentum ipsum nec aliquam. Sed congue pulvinar ligula, non consequat metus. Morbi euismod lacus sed mauris placerat, sit amet posuere erat sollicitudin. Aliquam erat volutpat. Etiam mollis odio nec diam rhoncus, a tempor sapien viverra. Duis a finibus urna, quis feugiat tellus. Quisque finibus egestas malesuada. In dictum ligula nec metus aliquet, varius fermentum erat semper. In id ipsum nisi. Sed eu posuere nunc, ut eleifend nulla. Aenean massa tellus, laoreet ut vulputate congue, venenatis sit amet enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam vulputate velit eu odio cursus rutrum. Cras blandit massa nisl, at ornare est efficitur eu. Phasellus eros turpis, congue sed leo et, blandit fringilla augue. Sed ut rutrum sapien. Sed id nulla ut nibh facilisis rhoncus. Curabitur ultrices ac felis eu viverra. Aliquam nec ipsum eget sem luctus pretium tristique vitae ante. Donec eget leo sed lectus posuere hendrerit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque finibus erat ipsum, non aliquam metus malesuada non. Vivamus velit erat, molestie quis scelerisque nec, malesuada sit amet enim. Proin et lorem urna. Donec sed fermentum augue. Mauris euismod dui non mauris maximus consequat sed sed mi. Pellentesque eleifend, turpis sed placerat condimentum, augue tellus ultricies velit, semper commodo nibh orci nec tellus. Ut condimentum quam dolor, quis fringilla ipsum pulvinar eu. Donec urna urna, suscipit sed augue id, pellentesque vestibulum leo. Nunc ultrices tortor a placerat tincidunt. Nam porta eu dui a consequat. Suspendisse lectus augue, placerat vitae lectus vitae, pharetra dictum erat. Pellentesque iaculis, ex ac luctus mollis, purus purus suscipit purus, eu fringilla justo tellus et nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eu feugiat ante. Integer eu quam massa. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Donec ullamcorper pharetra scelerisque. Donec venenatis efficitur nulla. Maecenas vitae luctus augue, nec tempor quam. Cras porttitor, massa a commodo varius, risus metus vestibulum mauris, a volutpat turpis lacus a tortor. Nulla facilisi. Fusce commodo, justo sit amet tempus volutpat, justo lectus cursus ipsum, sit amet cursus turpis nulla eu sapien. Phasellus eu nisi pellentesque, scelerisque nulla eget, congue nunc. Curabitur in nunc nibh. Quisque dignissim risus sed pulvinar egestas. Donec ac dolor nec ligula sodales maximus. Vivamus iaculis nisi sed justo gravida, non tempor dui ultrices. Suspendisse sit amet libero quis nisi egestas ullamcorper ac sed eros. Integer sagittis suscipit purus, sed feugiat augue pretium quis. Pellentesque nunc libero, vestibulum sed interdum sit amet, pharetra eu urna. Aenean in massa at libero convallis gravida. Morbi non odio quis sapien convallis facilisis eget quis erat. Suspendisse potenti. Duis non eleifend nisi, ac malesuada nibh."
             },
             {
                 "type": "img",
@@ -27,10 +27,11 @@
             },
             {
                 "type": "img",
-                "path": "bild3009.png",
+                "path": "iphone-12-camera-test-55.webp",
                 "imgText": "Me and my buddies"
             }
-        ]
+        ],
+        "date": "2023-01-12"
     },
     {
         "title": "Mitt Blogg Inlägg",
@@ -45,7 +46,7 @@
             },
             {
                 "type": "img",
-                "path": "bild3009.png",
+                "path": "selfie photo harsh lighting conditions.jpeg",
                 "imgText": "Me and my buddies"
             },
             {
