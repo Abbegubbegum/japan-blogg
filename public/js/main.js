@@ -1,5 +1,5 @@
 
-fetch('data.json')
+fetch('./js/data.json')
 .then((response) => response.json())
 .then((data) => {
 
@@ -9,7 +9,7 @@ fetch('data.json')
     for(i = 0; i < data.length; i++)
     {
         let mainDiv = document.createElement("div");
-        mainDiv.appendChild(createPost(data[i].title));
+        mainDiv.appendChild(createPost(data[i].title, data[i].date));
         mainDiv.setAttribute("class","blogItem")
         for (j = 0; j < data[i].content.length; j++)
         {
@@ -30,13 +30,17 @@ fetch('data.json')
     console.dir(mainDiv);
 })
 
-function createPost(postTitle) {
+function createPost(postTitle, postDate) {
     let div = document.createElement("div");
 
     let title = document.createElement("h2")
     title.append(postTitle);
 
+    let date = document.createElement("p");
+    date.append(postDate);
+
     div.appendChild(title);
+    div.appendChild(date);
 
     return div;
 }
