@@ -4,6 +4,7 @@ import mongodb from "mongodb";
 export default async function handler(req, res) {
 	try {
 		if (req.method === "GET") {
+			return res.send("Hello");
 			const db = await connectToDatabase();
 			const blogs = db.collection("blogs");
 
@@ -39,7 +40,11 @@ async function connectToDatabase() {
 
 	const mongoURI = process.env.MONGODB_URI || "mongodb://localhost/blogg";
 
+	console.log(mongoURI);
+
 	const client = await mongoClient.connect(mongoURI);
+
+	console.log(client);
 
 	return client.db();
 }
