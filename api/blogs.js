@@ -4,8 +4,8 @@ import mongodb from "mongodb";
 export default async function handler(req, res) {
 	try {
 		if (req.method === "GET") {
-			return res.send("Hello");
 			const db = await connectToDatabase();
+			return res.send("Hello");
 			const blogs = db.collection("blogs");
 
 			if (req.query.preview === "true") {
