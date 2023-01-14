@@ -1,87 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./js/form.js" defer></script>
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="./js/form.js" defer></script>
-  <link rel="stylesheet" href="./css/formStyle.css">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="./js/form.js" defer></script>
+		<link rel="stylesheet" href="./css/formStyle.css" />
+		<link rel="icon" type="image/x-icon" href="./icons/favicon.ico" />
+		<title>Japan Blogg Formulär</title>
+	</head>
 
-  <title>Japan Blogg Formulär</title>
-</head>
+	<body>
+		<h1>Fill in this form</h1>
+		<form id="form">
+			<label for="blog-name">
+				<h3>Title:</h3>
+				<input type="text" class="blog-name" id="title" required />
+			</label>
 
-<body>
-  <h1>Fill in this form</h1>
-  <form id="form">
-    <label for="blog-name">
-      <h3>Title:</h3>
-      <input type="text" class="blog-name" id="title" required/>
-    </label>
+			<label for="blog-author">
+				<h3>Author:</h3>
+				<input type="text" class="blog-author" id="author" required />
+			</label>
 
-    <label for="blog-author">
-      <h3>Author:</h3>
-      <input type="text" class="blog-author" id="author" required/>
-    </label>
-    
-    <label for="date-input">
-      <h3>Date:</h3>
-      <input type="date" required/>
-    </label>
+			<label for="date-input">
+				<h3>Date:</h3>
+				<input type="date" required />
+			</label>
 
-    <label for="location-input">
-      <h3>Location:</h3>
-      <input type="text" id="location" required/>
-    </label>
+			<label for="location-input">
+				<h3>Location:</h3>
+				<input type="text" id="location" required />
+			</label>
 
-    <div id="blog-content-container">
-      <div class="paragraf-container">
-        <label for="paragraf-title">
-          <h3>Paragraph Title:</h3>
-          <input type="text" class="paragraf-title" required/>
-        </label>
-        <label for="paragraf-text">
-          <h3>Paragraph:</h3>
-          <textarea class="paragraf-text" cols="30" rows="10" required></textarea>
-        </label>
-        <button class="RMElementButton" type="button" onclick="removeElement(event)">
-          Remove Element
-        </button>
-      </div>
-      <div class="img-container">
-        <label for="img-src">
-          <h3>Img Path:</h3>
+			<div id="blog-content-container">
+				<div class="paragraf-container">
+					<label for="paragraf-title">
+						<h3>Paragraph Title:</h3>
+						<input type="text" class="paragraf-title" required />
+					</label>
+					<label for="paragraf-text">
+						<h3>Paragraph:</h3>
+						<textarea
+							class="paragraf-text"
+							cols="30"
+							rows="10"
+							required
+						></textarea>
+					</label>
+					<button
+						class="RMElementButton"
+						type="button"
+						onclick="removeElement(event)"
+					>
+						Remove Element
+					</button>
+				</div>
+				<div class="img-container">
+					<label for="img-src">
+						<h3>Img Path:</h3>
 
-          <input type="text" class="img-src" required/>
-        </label>
+						<input type="text" class="img-src" required />
+					</label>
 
-        <label for="img-text">
-          <h3>Img Text:</h3>
-          <input type="text" class="img-text" required/>
-        </label>
-        <button class="RMElementButton" type="button" onclick="removeElement(event)">
-          Remove Element
-        </button>
-      </div>
+					<label for="img-text">
+						<h3>Img Text:</h3>
+						<input type="text" class="img-text" required />
+					</label>
+					<button
+						class="RMElementButton"
+						type="button"
+						onclick="removeElement(event)"
+					>
+						Remove Element
+					</button>
+				</div>
+			</div>
 
-    </div>
+			<label for="password-input" id="password-container">
+				<h3>Password:</h3>
+				<input type="password" id="password-input" required />
+			</label>
 
-    <label for="password-input" id="password-container">
-      <h3>Password:</h3>
-      <input type="password" id="password-input" required/>
-    </label>
+			<label for="submit">
+				<button type="submit-button" class="submit-button">
+					Submit
+				</button>
+			</label>
+		</form>
 
-    <label for="submit">
-      <button type="submit-button" class="submit-button">Submit</button>
-    </label>
-  </form>
-
-  <button class="addButtons" onclick="addParagraf()">Add Paragraf</button>
-  <button class="addButtons" onclick="addIMG()">Add IMG</button>
-</body>
-
+		<button class="addButtons" onclick="addParagraf()">Add Paragraf</button>
+		<button class="addButtons" onclick="addIMG()">Add IMG</button>
+	</body>
 </html>
