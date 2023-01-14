@@ -47,28 +47,23 @@ a:hover {
 }
 
 .blogItem {
+	display: flex;
+	flex-direction: column;
 	background-color: white;
 	border: 2px solid black;
 	border-radius: 1rem;
 	margin: 1rem 0;
 }
 
-.blogItem > div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 2rem;
-}
-
-.blogItem h2 {
+.blog-title h2 {
 	font-size: 5rem;
 	font-weight: 700;
 	letter-spacing: 0.1rem;
 }
 
 .blog-title {
-	margin: 2rem auto !important;
-	width: fit-content;
+	margin: 2rem;
+	align-self: center;
 }
 
 .blog-subheading {
@@ -96,9 +91,28 @@ a:hover {
 	margin-top: 1rem;
 }
 
+.blog-content {
+	margin: 2rem;
+	margin-top: 0;
+}
+
+.blog-content > div {
+	margin-bottom: 3rem;
+}
+
+.paragraf-title {
+	font-size: 3rem;
+	font-weight: lighter;
+}
+
+.paragraf-text {
+	max-width: 80ch;
+	font-size: 1.5rem;
+}
+
 .blog-img {
-	max-width: 40rem;
-	max-height: 30rem;
+	max-width: 50rem;
+	max-height: 50rem;
 }
 
 #aboutContainer {

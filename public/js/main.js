@@ -3,20 +3,26 @@ fetch("/api/blogs")
 	.then((data) => {
 		console.log(data);
 
+		data.sort((a, b) => b.timestamp - a.timestamp);
+
 		for (i = 0; i < data.length; i++) {
 			let mainDiv = document.createElement("div");
-			mainDiv.appendChild(createTitle(data[i]));
 			mainDiv.setAttribute("class", "blogItem");
+
+			mainDiv.appendChild(createTitle(data[i]));
+
+			let contentDiv = document.createElement("div");
+			contentDiv.classList.add("blog-content");
 			for (j = 0; j < data[i].content.length; j++) {
 				if (data[i].content[j].type === "txt") {
-					mainDiv.appendChild(
+					contentDiv.appendChild(
 						createParagraf(
 							data[i].content[j].title,
 							data[i].content[j].text
 						)
 					);
 				} else if (data[i].content[j].type === "img") {
-					mainDiv.appendChild(
+					contentDiv.appendChild(
 						createImage(
 							data[i].content[j].path,
 							data[i].content[j].imgText
@@ -24,6 +30,7 @@ fetch("/api/blogs")
 					);
 				}
 			}
+			mainDiv.appendChild(contentDiv);
 			document.getElementById("blogContainer").appendChild(mainDiv);
 		}
 
@@ -89,9 +96,11 @@ function createParagraf(titleText, text) {
 
 	let title = document.createElement("h3");
 	title.append(titleText);
+	title.classList.add("paragraf-title");
 
 	let paragraf = document.createElement("p");
 	paragraf.append(text);
+	paragraf.classList.add("paragraf-text");
 
 	div.appendChild(title);
 	div.appendChild(paragraf);
@@ -108,24 +117,10 @@ function createImage(imagePath, imageText) {
 
 	let paragraf = document.createElement("p");
 	paragraf.append(imageText);
+	paragraf.classList.add("img-text");
 
 	div.appendChild(img);
 	div.appendChild(paragraf);
-
-	return div;
-}
-
-function endPost(postAuthor, postLocation) {
-	let div = document.createElement("div");
-
-	let author = document.createElement("p");
-	author.append(postAuthor);
-
-	let location = document.createElement("p");
-	location.append(postLocation);
-
-	div.appendChild(author);
-	div.appendChild(location);
 
 	return div;
 }
