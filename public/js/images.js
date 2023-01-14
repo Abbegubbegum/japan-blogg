@@ -6,8 +6,6 @@ fetch("/api/img")
     return res.json();
   })
   .then((data) => {
-    console.dir(data);
-    console.log(data.length);
     for (let i = data.length - 1; i >= 0; i--) {
       if (typeof data[i] === "string") {
         document

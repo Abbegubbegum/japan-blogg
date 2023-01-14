@@ -1,4 +1,4 @@
-fetch("./js/data.json")
+fetch("/api/blogs")
 	.then((response) => response.json())
 	.then((data) => {
 		console.log(data);
@@ -23,9 +23,7 @@ fetch("./js/data.json")
 						)
 					);
 				}
-				console.log("loop");
 			}
-			console.log("loop2");
 			document.getElementById("blogContainer").appendChild(mainDiv);
 		}
 

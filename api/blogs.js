@@ -9,7 +9,6 @@ export default async function handler(req, res) {
 			if (req.query.preview === "true") {
 				console.log("getting preview");
 				let blogsResult = await blogs.find({}).toArray();
-				console.log(typeof blogsResult[0]);
 				const previewResults = blogsResult.map((blog) => {
 					delete blog["content"];
 					return blog;
