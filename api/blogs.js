@@ -1,11 +1,10 @@
-import { connectToDatabase } from "../lib/database.js";
+// import { connectToDatabase } from "../lib/database.js";
+import mongodb from "mongodb";
 
 export default async function handler(req, res) {
 	try {
 		if (req.method === "GET") {
 			const db = await connectToDatabase();
-			return res.send("Hello");
-
 			const blogs = db.collection("blogs");
 
 			if (req.query.preview === "true") {
@@ -33,4 +32,14 @@ export default async function handler(req, res) {
 		console.log(err);
 		res.status(500).send("error occured when getting blog(s)");
 	}
+}
+
+async function connectToDatabase() {
+	const mongoClient = mongodb.MongoClient;
+
+	const mongoURI = process.env.MONGODB_URI || "mongodb://localhost/blogg";
+
+	const client = await mongoClient.connect(mongoURI);
+
+	return client.db();
 }
