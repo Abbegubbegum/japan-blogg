@@ -1,11 +1,9 @@
-// import { connectToDatabase } from "../lib/database.js";
-import { MongoClient } from "mongodb";
+import { connectToDatabase } from "../lib/database.js";
 
 export default async function handler(req, res) {
 	try {
 		if (req.method === "GET") {
 			const db = await connectToDatabase();
-			// return res.send("Hello");
 			const blogs = db.collection("blogs");
 
 			if (req.query.preview === "true") {
@@ -33,15 +31,4 @@ export default async function handler(req, res) {
 		console.log(err);
 		res.status(500).send("error occured when getting blog(s)");
 	}
-}
-
-async function connectToDatabase() {
-	const mongoURI = process.env.MONGODB_URI || "mongodb://localhost/blogg";
-
-	const mongoClient = await new MongoClient(mongoURI).connect();
-	console.log(mongoURI);
-
-	console.log(mongoClient);
-
-	return mongoClient.db();
 }
