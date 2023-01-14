@@ -3,9 +3,9 @@ import { connectToDatabase } from "../lib/database.js";
 export default async function handler(req, res) {
 	try {
 		if (req.method === "GET") {
+			const db = await connectToDatabase();
 			return res.send("Hello");
 
-			const db = await connectToDatabase();
 			const blogs = db.collection("blogs");
 
 			if (req.query.preview === "true") {
