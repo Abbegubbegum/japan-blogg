@@ -1,8 +1,6 @@
 fetch("/api/blogs")
 	.then((response) => response.json())
 	.then((data) => {
-		console.log(data);
-
 		data.sort((a, b) => b.timestamp - a.timestamp);
 
 		for (i = 0; i < data.length; i++) {
@@ -11,30 +9,13 @@ fetch("/api/blogs")
 
 			mainDiv.appendChild(createTitle(data[i]));
 
-			let contentDiv = document.createElement("div");
-			contentDiv.classList.add("blog-content");
-			for (j = 0; j < data[i].content.length; j++) {
-				if (data[i].content[j].type === "txt") {
-					contentDiv.appendChild(
-						createParagraf(
-							data[i].content[j].title,
-							data[i].content[j].text
-						)
-					);
-				} else if (data[i].content[j].type === "img") {
-					contentDiv.appendChild(
-						createImage(
-							data[i].content[j].path,
-							data[i].content[j].imgText
-						)
-					);
-				}
-			}
-			mainDiv.appendChild(contentDiv);
+			mainDiv.setAttribute(
+				"onclick",
+				`redirectToIndividual(${data[i].timestamp})`
+			);
+
 			document.getElementById("blogContainer").appendChild(mainDiv);
 		}
-
-		console.dir(mainDiv);
 	});
 
 function createTitle(post) {
@@ -42,22 +23,25 @@ function createTitle(post) {
 
 	div.classList.add("blog-title");
 
+	let date = document.createElement("p");
+	date.append(post.date);
+	date.classList.add("blog-date");
+
 	let title = document.createElement("h2");
 	title.append(post.title);
 
+	div.appendChild(date);
 	div.appendChild(title);
 
-	div.appendChild(createSubheading(post.date, post.author, post.location));
+	div.appendChild(createSubheading(post.author, post.location));
 
 	return div;
 }
 
-function createSubheading(postDate, postAuthor, postLocation) {
+function createSubheading(postAuthor, postLocation) {
 	let div = document.createElement("div");
 
 	div.classList.add("blog-subheading");
-
-	let authorLocationDiv = document.createElement("div");
 
 	let author = document.createElement("p");
 	author.append("By: " + postAuthor);
@@ -78,49 +62,13 @@ function createSubheading(postDate, postAuthor, postLocation) {
 
 	locationDiv.appendChild(location);
 
-	authorLocationDiv.appendChild(author);
-	authorLocationDiv.appendChild(locationDiv);
-
-	let date = document.createElement("p");
-	date.append(postDate);
-	date.classList.add("blog-date");
-
-	div.appendChild(authorLocationDiv);
-	div.appendChild(date);
+	div.appendChild(author);
+	div.appendChild(locationDiv);
 
 	return div;
 }
 
-function createParagraf(titleText, text) {
-	let div = document.createElement("div");
-
-	let title = document.createElement("h3");
-	title.append(titleText);
-	title.classList.add("paragraf-title");
-
-	let paragraf = document.createElement("p");
-	paragraf.append(text);
-	paragraf.classList.add("paragraf-text");
-
-	div.appendChild(title);
-	div.appendChild(paragraf);
-
-	return div;
-}
-
-function createImage(imagePath, imageText) {
-	let div = document.createElement("div");
-
-	let img = document.createElement("img");
-	img.src = "./imgs/" + imagePath;
-	img.classList.add("blog-img");
-
-	let paragraf = document.createElement("p");
-	paragraf.append(imageText);
-	paragraf.classList.add("img-text");
-
-	div.appendChild(img);
-	div.appendChild(paragraf);
-
-	return div;
+function redirectToIndividual(timestamp) {
+	localStorage.setItem("timestamp", timestamp);
+	window.location.pathname = "/individual.html";
 }

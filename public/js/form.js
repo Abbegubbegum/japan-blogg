@@ -107,8 +107,6 @@ async function sendForm() {
 
 	let data = document.querySelectorAll("#blog-content-container > *");
 
-	console.dir(data);
-
 	data.forEach((element) => {
 		if (element.classList.contains("img-container")) {
 			let addContent = {
@@ -147,8 +145,6 @@ async function sendForm() {
 		}
 	});
 
-	console.log(content);
-
 	const res = await fetch("api/form", {
 		method: "POST",
 		headers: {
@@ -163,8 +159,6 @@ async function sendForm() {
 			password: password,
 		}),
 	});
-
-	console.log(res);
 
 	if (res.ok && res.status === 200) {
 		alert(await res.text());

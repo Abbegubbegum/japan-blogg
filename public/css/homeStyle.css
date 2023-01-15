@@ -46,6 +46,12 @@ body {
 	background-color: #cf0030;
 }
 
+.back-button {
+	align-self: flex-start;
+	margin: 1rem;
+	margin-left: 2rem;
+}
+
 #blogContainer {
 	display: flex;
 	justify-content: center;
@@ -55,12 +61,18 @@ body {
 }
 
 .blogItem {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	background-color: white;
 	border: 2px solid black;
 	border-radius: 1rem;
 	margin: 1rem 0;
+}
+
+.blogItem:hover {
+	cursor: pointer;
+	background-color: #eee;
 }
 
 .blog-title h2 {
@@ -71,15 +83,13 @@ body {
 
 .blog-title {
 	margin: 2rem;
-	align-self: center;
 }
 
 .blog-subheading {
 	margin-top: 0.7rem;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	width: 100%;
-	justify-content: space-between;
 }
 
 .blog-author {
@@ -97,6 +107,13 @@ body {
 	display: flex;
 	align-items: center;
 	margin-top: 1rem;
+}
+
+.blog-date {
+	position: absolute;
+	right: 1rem;
+	top: 0.8rem;
+	font-size: 1.4rem;
 }
 
 .blog-content {
@@ -119,8 +136,12 @@ body {
 }
 
 .blog-img {
-	max-width: 50rem;
-	max-height: 50rem;
+	max-width: 60rem;
+	max-height: 30rem;
+}
+
+.img-text {
+	font-size: 1.2rem;
 }
 
 #aboutContainer {
