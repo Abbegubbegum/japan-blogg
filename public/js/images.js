@@ -7,14 +7,18 @@ fetch("/api/img")
 	})
 	.then((data) => {
 		for (let i = data.length - 1; i >= 0; i--) {
+			if (typeof data[i] === "object") {
+				document
+					.getElementById("imgs-container")
+					.appendChild(createImage("./imgs/" + data[i].path));
+			}
+		}
+
+		for (let i = data.length - 1; i >= 0; i--) {
 			if (typeof data[i] === "string") {
 				document
 					.getElementById("imgs-container")
 					.appendChild(createImage("./imgs/" + data[i]));
-			} else {
-				document
-					.getElementById("imgs-container")
-					.appendChild(createImage("./imgs/" + data[i].path));
 			}
 		}
 	})
