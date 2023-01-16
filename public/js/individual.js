@@ -22,7 +22,7 @@ fetch("/api/blogs?timestamp=" + timestamp)
 				);
 			} else if (data.content[j].type === "img") {
 				contentDiv.appendChild(
-					createImage(data.content[j].path, data.content[j].imgText)
+					createImage(data.content[j].path, data.content[j].text)
 				);
 			}
 		}
