@@ -10,7 +10,7 @@ fetch("/api/img")
 			if (typeof data[i] === "object") {
 				document
 					.getElementById("imgs-container")
-					.appendChild(createImage("./imgs/" + data[i].path));
+					.appendChild(createImage("https://japanblog-imgs.s3.eu-central-1.amazonaws.com/" + data[i].path));
 			}
 		}
 
@@ -18,7 +18,7 @@ fetch("/api/img")
 			if (typeof data[i] === "string") {
 				document
 					.getElementById("imgs-container")
-					.appendChild(createImage("./imgs/" + data[i]));
+					.appendChild(createImage("https://japanblog-imgs.s3.eu-central-1.amazonaws.com/" + data[i]));
 			}
 		}
 	})

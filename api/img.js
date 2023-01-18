@@ -19,7 +19,7 @@ export default async function handler(req, res) {
 				});
 			});
 
-			const miscImgs = getImages();
+			const miscImgs = await getImages();
 			miscImgs.forEach((element) => {
 				// this will not find duplicates from miscImgs
 				if (!imgArray.find((img) => img.path === element)) {

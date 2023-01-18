@@ -101,7 +101,7 @@ function createImage(imagePath, imageText) {
 	let div = document.createElement("div");
 
 	let img = document.createElement("img");
-	img.src = "./imgs/" + imagePath;
+	img.src = "https://japanblog-imgs.s3.eu-central-1.amazonaws.com/" + imagePath;
 	img.classList.add("blog-img");
 
 	let paragraf = document.createElement("p");
