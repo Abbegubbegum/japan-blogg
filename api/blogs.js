@@ -17,12 +17,6 @@ export default async function handler(req, res) {
 			} else if (isNaN(req.query.timestamp)) {
 				const blogResult = await blogs.find({}).toArray(); // get all blogs from database here
 
-				blogResult.sort((a, b) => {
-					const aInt = parseInt(a.date.slice(-2));
-					const bInt = parseInt(b.date.slice(-2));
-
-					return bInt - aInt;
-				});
 				res.status(200).send(blogResult);
 			} else {
 				const blog = await blogs.findOne({

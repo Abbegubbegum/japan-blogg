@@ -1,7 +1,12 @@
 fetch("/api/blogs")
 	.then((response) => response.json())
 	.then((data) => {
-		data.sort((a, b) => b.timestamp - a.timestamp);
+		data.sort((a, b) => {
+			const aInt = parseInt(a.date.slice(-2));
+			const bInt = parseInt(b.date.slice(-2));
+
+			return bInt - aInt;
+		});
 
 		for (i = 0; i < data.length; i++) {
 			let mainDiv = document.createElement("div");
