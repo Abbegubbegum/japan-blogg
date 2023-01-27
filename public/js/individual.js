@@ -86,13 +86,18 @@ function createParagraf(titleText, text) {
 	let title = document.createElement("h3");
 	title.append(titleText);
 	title.classList.add("paragraf-title");
-
-	let paragraf = document.createElement("p");
-	paragraf.append(text);
-	paragraf.classList.add("paragraf-text");
-
+	
 	div.appendChild(title);
-	div.appendChild(paragraf);
+
+	text.split("\n").forEach(textBlock => {
+		let paragraf = document.createElement("p");
+		paragraf.append(textBlock);
+		paragraf.classList.add("paragraf-text");
+		div.appendChild(paragraf);
+	});
+
+	
+
 
 	return div;
 }
