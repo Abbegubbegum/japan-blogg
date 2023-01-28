@@ -1,4 +1,6 @@
-# NTI Japan Blogg
+# NTI Japan Blogg [DEPRECATED]
+
+### The new source code can be found [here](https://github.com/Abbegubbegum/japan-blogg-vue)
 
 A web application for displaying and managing blogg posts for NTI Odenplans TE4 class trip to japan 
 
